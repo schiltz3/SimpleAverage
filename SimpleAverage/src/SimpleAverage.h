@@ -9,7 +9,6 @@ struct simple_average_s
   float average_agg;
   int count;
   int max;
-  bool active;
 };
 
 void printSimpleAverage(struct simple_average_s *average);

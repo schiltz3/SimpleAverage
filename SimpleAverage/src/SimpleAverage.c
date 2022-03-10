@@ -22,7 +22,6 @@ int initSimpleAverage(struct simple_average_s *average, int max)
   average->average_agg = 0.0;
   average->count = 0;
   average->max = max;
-  average->active = true;
 
   return 0;
 }

@@ -1,17 +1,5 @@
 #include "SimpleAverage.h"
 
-void printSimpleAverage(struct simple_average_s *average)
-{
-  if (average == NULL)
-  {
-    return;
-  }
-  printf("Average_agg: %f\n", average->average_agg);
-  printf("Current count: %d\n", average->count);
-  printf("Max: %d\n", average->max);
-  printf("Active: %d\n", average->max);
-}
-
 int initSimpleAverage(struct simple_average_s *average, int max)
 {
   if (average == NULL)

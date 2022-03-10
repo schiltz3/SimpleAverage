@@ -1,13 +1,15 @@
 #include <stdio.h>
 #include "SimpleAverage.h"
 
-#define MAX 100
+#define MAX UINT16_MAX
+
+void printSimpleAverage(struct simple_average_s *average);
 
 int main()
 {
 	struct simple_average_s low;
 
-	if (initSimpleAverage(&low, MAX) == -1)
+	if (initSimpleAverage(&low) == -1)
 	{
 		printf("Error: initSimpleAverage failed");
 	}
@@ -15,11 +17,16 @@ int main()
 
 	printf("--------------------------------\n");
 
-	for (int i = 0; i <= MAX / 2; i++)
+	for (int i = 0; i < MAX + 1; i++)
 	{
-		if (updateSimpleAverage(&low, i) == -1)
+		int ret = updateSimpleAverage(&low, i);
+		if (ret == -1)
 		{
 			printf("Error: updateSimpleAverage failed");
+		}
+		else if (ret == 1)
+		{
+			printf("Error: updateSimpleAverage, max has been reached\n");
 		}
 	}
 	int average = (int)getSimpleAverage(&low);
@@ -36,4 +43,13 @@ int main()
 	printSimpleAverage(&low);
 
 	return (0);
+}
+void printSimpleAverage(struct simple_average_s *average)
+{
+	if (average == NULL)
+	{
+		return;
+	}
+	printf("Average_agg: %d\n", average->sum);
+	printf("Current count: %d\n", average->count);
 }

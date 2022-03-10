@@ -4,13 +4,17 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-void print(char* print);
-
-struct simple_average_s{
-  float average;
+struct simple_average_s
+{
+  float average_agg;
   int count;
   int max;
   bool active;
 };
+
+void printSimpleAverage(struct simple_average_s *average);
+int initSimpleAverage(struct simple_average_s *average, int max);
+int updateSimpleAverage(struct simple_average_s *average, int update);
+float getSimpleAverage(struct simple_average_s *average);
 
 #endif

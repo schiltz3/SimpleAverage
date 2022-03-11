@@ -52,3 +52,14 @@ Mkfile.old
 dkms.conf
 
 .vscode/
+
+SimpleAverage/build/test/cache/
+
+SimpleAverage/build/test/runners/
+
+SimpleAverage/build/test/results/
+
+SimpleAverage/build/test/dependencies/
+
+artifacts/
+preprocess/

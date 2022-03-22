@@ -1,6 +1,6 @@
 #include "SimpleAverage.h"
 
-int initSimpleAverage(struct simple_average_s *average)
+int InitSimpleAverage(struct simple_average_s *average)
 {
   if (average == NULL)
   {
@@ -13,7 +13,7 @@ int initSimpleAverage(struct simple_average_s *average)
   return 0;
 }
 
-int updateSimpleAverage(struct simple_average_s *average, uint16_t update)
+int UpdateSimpleAverage(struct simple_average_s *average, uint16_t update)
 {
   if (average == NULL)
   {
@@ -33,7 +33,7 @@ int updateSimpleAverage(struct simple_average_s *average, uint16_t update)
   return 0;
 }
 
-uint16_t getSimpleAverage(struct simple_average_s *average)
+uint16_t GetSimpleAverage(struct simple_average_s *average)
 {
   if (average == NULL)
   {

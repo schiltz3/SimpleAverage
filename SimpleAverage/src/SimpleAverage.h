@@ -23,7 +23,7 @@ struct simple_average_s
  * @param average Pointer to struct to update
  * @return int -1 = error, 0 = Ok
  */
-int initSimpleAverage(struct simple_average_s *average);
+int InitSimpleAverage(struct simple_average_s *average);
 
 /**
  * @brief Update simple_average_s struct
@@ -32,7 +32,7 @@ int initSimpleAverage(struct simple_average_s *average);
  * @param update Value to update average accumulator with
  * @return int -1 = error, 0 = Ok, 1 = max has been reached
  */
-int updateSimpleAverage(struct simple_average_s *average, uint16_t update);
+int UpdateSimpleAverage(struct simple_average_s *average, uint16_t update);
 
 /**
  * @brief Get the current average
@@ -40,6 +40,6 @@ int updateSimpleAverage(struct simple_average_s *average, uint16_t update);
  * @param average Pointer to struct to get the current average from
  * @return float Current average
  */
-uint16_t getSimpleAverage(struct simple_average_s *average);
+uint16_t GetSimpleAverage(struct simple_average_s *average);
 
 #endif

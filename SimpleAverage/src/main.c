@@ -9,7 +9,7 @@ int main()
 {
 	struct simple_average_s low;
 
-	if (initSimpleAverage(&low) == -1)
+	if (InitSimpleAverage(&low) == -1)
 	{
 		printf("Error: initSimpleAverage failed");
 	}
@@ -19,7 +19,7 @@ int main()
 
 	for (int i = 0; i < MAX + 1; i++)
 	{
-		int ret = updateSimpleAverage(&low, i);
+		int ret = UpdateSimpleAverage(&low, i);
 		if (ret == -1)
 		{
 			printf("Error: updateSimpleAverage failed");
@@ -29,7 +29,7 @@ int main()
 			printf("Error: updateSimpleAverage, max has been reached\n");
 		}
 	}
-	int average = (int)getSimpleAverage(&low);
+	int average = (int)GetSimpleAverage(&low);
 	if (average == -1)
 	{
 		printf("Error: getSimpleAverage failed");

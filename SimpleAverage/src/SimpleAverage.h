@@ -38,8 +38,8 @@ int UpdateSimpleAverage(struct simple_average_s *average, uint16_t update);
  * @brief Get the current average
  *
  * @param average Pointer to struct to get the current average from
- * @return float Current average
+ * @return float Current average, -1 if error, max size of uint16 if not an error
  */
-uint16_t GetSimpleAverage(struct simple_average_s *average);
+int32_t GetSimpleAverage(struct simple_average_s *average);
 
 #endif

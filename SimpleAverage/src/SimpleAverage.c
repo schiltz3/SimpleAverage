@@ -33,9 +33,13 @@ int UpdateSimpleAverage(struct simple_average_s *average, uint16_t update)
   return 0;
 }
 
-uint16_t GetSimpleAverage(struct simple_average_s *average)
+int32_t GetSimpleAverage(struct simple_average_s *average)
 {
   if (average == NULL)
+  {
+    return -1;
+  }
+  if(average->count <= 0)
   {
     return -1;
   }
